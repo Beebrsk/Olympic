@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sports",
+  "info": {
+    "name": "Sport",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Race_day": {
+      "type": "date"
+    },
+    "team": {
+      "via": "sports",
+      "model": "team"
+    }
+  }
+}

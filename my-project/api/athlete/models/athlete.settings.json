@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "athletes",
+  "info": {
+    "name": "Athlete",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Number": {
+      "type": "integer"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "event": {
+      "model": "event",
+      "via": "athlete"
+    },
+    "team": {
+      "model": "team",
+      "via": "athlete"
+    },
+    "sport": {
+      "model": "sport"
+    }
+  }
+}
